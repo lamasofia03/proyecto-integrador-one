@@ -3,8 +3,8 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 1px;
     /* Para que el scrolleo en la one page sea suave */
     scroll-behavior: smooth;
 }
@@ -15,21 +15,18 @@ body {
     line-height: 1.2;
     background-color: #fbfbfb ;
     color: #0f0f0f;
+    display: block;
 }
 
 ul {
     list-style: none;
 }
 
-/* Para que los enlaces hereden el color de texto y no tengan subrayado */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
-*  el margin: auto; para tenerlo centrado fácilmente ;)
-*/
 main {
     max-width: 1200px;
     margin: auto;
@@ -37,6 +34,7 @@ main {
 
 h1 {
     font-size: 48px;
+    color: #af599e;
 }
 
 h2 {
@@ -59,6 +57,7 @@ header {
     top: 0;
     left: 0;
     box-shadow: 0 3px 10px -spx #5f5f5f;
+    flex-wrap: nowrap;
 
 
 }
@@ -82,16 +81,93 @@ li.menu-item:hover {
     transition: background-color 0.3s;
 }
 
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
 section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     min-height: 100vh;
+    padding: 16px;
     padding-top: 90px;
+}
+
+section#inicio {
+    flex-direction: row;
+    justify-content: space-around;
 
 }
 
-article {
+figure.presentacion-img {
+    margin-bottom: 20px;
+}
+
+figure.presentacion-img img {
+    border-radius: 50%;
+    width: 400px;
+
+}
+
+
+article.presentacion {
     width: 50%;
+}
+
+
+section#contacto p {
+    text-align: center;
+    max-width: 600px;
+}
+
+article.hablemos {
+    background: rgba(175, 89, 158, 0.3);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ul#contact-links {
+    display: flex;
+    margin-top: 20px;
+}
+
+ul#contact-links li {
+    margin: 32px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+ul#contact-links li:hover {
+    background: rgba(175, 89, 158, 0.3);
+    transition: background-color 0.3s;
+}
+
+img.icon {
+    width: 80px;
+}
+
+footer {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #af599e;
+    color: #fbfbfb;
+}
+
+.descargarcv {
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 3px;
+    border-radius: 20px;
+    background-color: #af599e
+}
+
+hr {
+    color: #0f0f0f;
 }
